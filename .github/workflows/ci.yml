@@ -5,7 +5,13 @@ on:
         - 'feature/**'
         - 'bugfix/**'
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello, World!"
+    lint-jobs:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                node-version: '24.x
+                cache: 'npm'
+            - run: node -v
+            
