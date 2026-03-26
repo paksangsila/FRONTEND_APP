@@ -1,4 +1,4 @@
-nmae: Frontend workshop demo
+name: Frontend workshop demo
 on:
   push:
     branches: 
