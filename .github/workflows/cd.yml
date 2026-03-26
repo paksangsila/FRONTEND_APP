@@ -8,9 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Clone repository
-              uses: actions/checkout@v6
-            - uses: actions/checkout@v6
-            - uses: actions/setup-node@v6
+              uses: actions/checkout@v8
+            - uses: actions/checkout@v8
+            - uses: actions/setup-node@v8
               with:
                 node-version: '18'
                 cache: 'npm'
@@ -19,7 +19,7 @@ jobs:
             - run: npm ci
             - run: npm run build
             - name: Upload dist folder to artifacts
-              uses: actions/upload-artifact@v5
+              uses: actions/upload-artifact@v8
               with:
                 name: dist-production
                 path: dist
